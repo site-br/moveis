@@ -3,6 +3,6 @@
  <name>Simple placemark</name>
  <description>Attached to the ground. Intelligently places itself at the height of the underlying terrain.</description>
  <Point>
- <coordinates>-46.6150363,-23.5694025,0</coordinates>
+ <coordinates>-46.6150363,-23.5694025</coordinates>
  </Point>
  </Placemark> </kml>
