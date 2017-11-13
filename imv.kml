@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<kml xmlns="http://www.opengis.net/kml/2.2"> <Placemark>
+<kml xmlns="http://www.opengis.net/kml/2.2"> 
+
+<Placemark>
  <name>Nome</name>
  <description>Decrição</description>
  <Point>
- <coordinates>-46.6150363,-23.5694025</coordinates>
+  <coordinates>-46.6150363,-23.5694025</coordinates>
  </Point>
- </Placemark> 
- </kml>
+</Placemark> 
+
+<Placemark>
+ <name>Nome2</name>
+ <description>Decrição2</description>
+ <Point>
+  <coordinates>-46.7,-23.6</coordinates>
+ </Point>
+</Placemark> 
+
+
+</kml>
