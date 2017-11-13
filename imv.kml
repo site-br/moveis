@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2"> 
 <Document>
-	<Placemark>
+	<Placemark id="1">
 	 <name>Nome</name>
 	 <description>Decrição</description>
 	 <Point>
@@ -9,7 +9,7 @@
 	 </Point>
 	</Placemark> 
 
-	<Placemark>
+	<Placemark id="2">
 	 <name>Nome2</name>
 	 <description>Decrição2</description>
 	 <Point>
