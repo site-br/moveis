@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+
 <style>
 table {
     border-collapse: collapse;
@@ -17,17 +17,159 @@ th, td {
 
 tr:nth-child(even){background-color: #f2f2f2}
 </style>
-</head>
+
+
+<style>
+body {
+  font-family: Verdana, sans-serif;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row > .column {
+  padding: 0 8px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+img {
+  margin-bottom: -4px;
+}
+
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+</style>
 <body>
 
 <h2>MÓVEIS ANTIGOS</h2>
 <p>TESTE.</p>
-<p>TESTE.</p>
+<h2 style="text-align:center">MÓVEIS ANTIGOS</h2>
 
-
+<!-- TABELA -->
 
 <div style="overflow-x:auto;">
-  <table border="1">
+  <table border="1" id='tabela'>
     <tr>
       <th>Ítem</th>
       <th>LAP(cm)</th>
@@ -36,163 +178,113 @@ tr:nth-child(even){background-color: #f2f2f2}
       <th>Obs</th>
       <th>Imagem</th>
     </tr>
-    
-<tr><td>POLTRONA</td><td>80 x 100 x 85</td><td>2</td><td>600</td><td>CONJUNTO LUIS XV PARA SALA</td><td><img name='img' src='imgs/poltrona_sala_luiz_XV_1.JPG' alt='' border=3 height=100 width=100></img></td></tr>
-<tr><td>MESA DE CENTRO</td><td>85 x 52 x 52</td><td>1</td><td>200</td><td>CONJUNTO LUIS XV PARA SALA</td><td><img name='img' src='imgs/mesa_centro_espelhada.JPG' alt='' border=3 height=100 width=100></img></td></tr>
-<tr><td>SOFÁ</td><td>222 x 107 x 90</td><td>1</td><td>900</td><td>CONJUNTO LUIS XV PARA SALA</td><td><img name='img' src='imgs/poltrona_sala_luiz_XV_2.JPG' alt='' border=3 height=100 width=100></img></td></tr>
-<tr><td>POLTRONA</td><td>86 x 88 x 85</td><td>6</td><td>450</td><td></td><td><img name='img' src='imgs/poltrona_sala_baixo.JPG' alt='' border=3 height=100 width=100></img></td></tr>
-<tr><td>MESA DE CENTRO</td><td>72 x 48 x 50</td><td>1</td><td>100</td><td></td><td><img name='img' src='imgs/' alt='' border=3 height=100 width=100></img></td></tr>
-<tr><td>CADEIRA</td><td>60 x 120 x 60</td><td>1</td><td>300</td><td></td><td><img name='img' src='imgs/' alt='' border=3 height=100 width=100></img></td></tr>
-<tr><td>LUSTRE</td><td></td><td>2</td><td>700</td><td>medir</td><td><img name='img' src='imgs/' alt='' border=3 height=100 width=100></img></td></tr>
-<tr><td>ARMÁRIO</td><td>165 x 168 x 40</td><td>1</td><td>300</td><td></td><td><img name='img' src='imgs/armario.JPG' alt='' border=3 height=100 width=100></img></td></tr>
-<tr><td>BIBLIOTECA</td><td>365 x 215 x 42</td><td>1</td><td>1000</td><td></td><td><img name='img' src='imgs/biblioteca4.JPG' alt='' border=3 height=100 width=100></img></td></tr>
-<tr><td>ESCRIVANINHA</td><td>144 x 78 x 80</td><td>1</td><td>1500</td><td></td><td><img name='img' src='imgs/escrivaninha2.JPG' alt='' border=3 height=100 width=100></img></td></tr>
-<tr><td>CRISTALEIRA</td><td>140 x 176 x 48</td><td>1</td><td>1500</td><td>com/sem itens</td><td><img name='img' src='imgs/cristaleira2.JPG' alt='' border=3 height=100 width=100></img></td></tr>
-<tr><td>MESA</td><td>116 x 80 x 230</td><td>1</td><td>2500</td><td></td><td><img name='img' src='imgs/sala_jantar3.JPG' alt='' border=3 height=100 width=100></img></td></tr>
-<tr><td>CADEIRA SEM APOIO</td><td>48 x 116 x 48</td><td>8</td><td>230</td><td></td><td><img name='img' src='imgs/sala_jantar4.JPG' alt='' border=3 height=100 width=100></img></td></tr>
-<tr><td>CADEIRA</td><td>60 x 120 x 56</td><td>2</td><td>300</td><td></td><td><img name='img' src='imgs/sala_jantar4.JPG' alt='' border=3 height=100 width=100></img></td></tr>
-<tr><td>BUFFET 1P</td><td>104 x 128 x 60</td><td>1</td><td>1000</td><td></td><td><img name='img' src='imgs/buffet5.JPG' alt='' border=3 height=100 width=100></img></td></tr>
-<tr><td>BUFFET 2P</td><td>230 x 136 x 60</td><td>1</td><td>1500</td><td></td><td><img name='img' src='imgs/buffet5.JPG' alt='' border=3 height=100 width=100></img></td></tr>
-<tr><td>ESPELHO DE CHÃO</td><td>62 x 184 x 50</td><td>1</td><td>800</td><td></td><td><img name='img' src='imgs/espelho_de_pe.JPG' alt='' border=3 height=100 width=100></img></td></tr>
-<tr><td>CRIADO MUDO</td><td>50 x 55 x 42</td><td>4</td><td>170</td><td></td><td><img name='img' src='imgs/gaveteiro_criado_mudo2.JPG' alt='' border=3 height=100 width=100></img></td></tr>
-<tr><td>PENTEADEIRA</td><td>130 x 170 x 50</td><td>2</td><td>800</td><td></td><td><img name='img' src='imgs/penteadeira.JPG' alt='' border=3 height=100 width=100></img></td></tr>
-<tr><td>GAVETEIRO</td><td>120 x 100 x 60</td><td>2</td><td>600</td><td></td><td><img name='img' src='imgs/gaveteiro_criado_mudo2.JPG' alt='' border=3 height=100 width=100></img></td></tr>
-<tr><td>CAMA SOLTEIRO</td><td>100 x 110 x 210</td><td>2</td><td>300</td><td>sem colchão</td><td><img name='img' src='imgs/' alt='' border=3 height=100 width=100></img></td></tr>
-<tr><td>CAMA CASAL</td><td>166 x 146 x 210</td><td>2</td><td>700</td><td>com colchão</td><td><img name='img' src='imgs/cama_casal1.JPG' alt='' border=3 height=100 width=100></img></td></tr>
-<tr><td>GUARDA ROUPA 2P</td><td>150 x 192 x 66</td><td>2</td><td>300</td><td>coroa, borboletas, puxador, quebradas, desmontar?</td><td><img name='img' src='imgs/guarda_roupa.JPG' alt='' border=3 height=100 width=100></img></td></tr>
-<tr><td>GUARDA ROUPA 3P</td><td>200 x 192 x 66</td><td>2</td><td>500</td><td>coroa, borboletas, puxador, quebradas, desmontar?</td><td><img name='img' src='imgs/guarda_roupa.JPG' alt='' border=3 height=100 width=100></img></td></tr>
-
 
   </table>
 </div>
 
-<!--INICIO IMAGEM-->
-<!-- The Modal -->
-<div id="myModal" class="modal">
+<!-- FIM TABELA -->
 
-  <!-- The Close Button -->
-  <span class="close">&times;FECHAR</span>
-
-  <!-- Modal Content (The Image) -->
-  <img class="modal-content" id="imgmc">
-
-  <!-- Modal Caption (Image Text) -->
-  <div id="caption"></div>
-</div>
-<style>
-
-
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
-}
-
-/* Modal Content (Image) */
-.modal-content {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-}
-
-/* Caption of Modal Image (Image Text) - Same Width as the Image */
-#caption {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-    text-align: center;
-    color: #ccc;
-    padding: 10px 0;
-    height: 150px;
-}
-
-/* Add Animation - Zoom in the Modal */
-.modal-content, #caption { 
-    -webkit-animation-name: zoom;
-    -webkit-animation-duration: 0.6s;
-    animation-name: zoom;
-    animation-duration: 0.6s;
-}
-
-@-webkit-keyframes zoom {
-    from {-webkit-transform:scale(0)} 
-    to {-webkit-transform:scale(1)}
-}
-
-@keyframes zoom {
-    from {transform:scale(0)} 
-    to {transform:scale(1)}
-}
-
-/* The Close Button */
-.close {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: #f1f1f1;
-    font-size: 40px;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.close:hover,
-.close:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-/* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 700px){
-    .modal-content {
-        width: 100%;
-    }
-}
-</style>
 
 <script>
-// Get the modal
-var modal = document.getElementById('myModal');
 
-// Get the image and insert it inside the modal - use its "alt" text as a caption
+//Adiciona MODAL dinamicamente
+function addModal(id,arr) {
 
-var modalImg = document.getElementById("imgmc");
-
-
-var vimg = document.getElementsByName('img');
-
-for (var i = 0; i < vimg.length; i++) {
-	var img = vimg[i];
-	var captionText = document.getElementById("caption");
-	img.onclick = function(){
-		modal.style.display = "block";
-		modalImg.src = this.src;
-		captionText.innerHTML = this.alt;
+	var mod=document.createElement("myModal"+id);
+	mod.className = "modal";
+	mod.id = "myModal"+id;
+	
+	var html='<span class="close cursor" onclick="closeModal('+id+')">&times;</span><div class="modal-content">';
+	
+	for (var i=1;i<=arr.length;i++){		
+		html=html+'<div class="mySlides" name="mySlides'+id+'" ><div class="numbertext">'+i+' / '+arr.length+'</div><img src="imgs/'+vimg[i-1]+'" style="width:100%"></div>';		
 	}
+	
+	html=html+'<a class="prev" onclick="plusSlides(-1,'+id+')">&#10094;</a><a class="next" onclick="plusSlides(1,'+id+')">&#10095;</a><div class="caption-container"><p id="caption'+id+'"></p></div></div>';
+	mod.innerHTML=html;
+	document.body.appendChild(mod);
+	
+}
+function addTabRow(id,item,lap,qut,pu,obs,vimg) {
+	var tabela = document.getElementById("tabela");
+	var row = document.createElement("tr");
+	row.innerHTML ='<td>'+item+'</td><td>'+lap+'</td><td>'+qut+'</td><td>'+pu+'</td><td>'+obs+'</td><td><img name="img" src="imgs/'+vimg[0]+'" onclick="openModal('+id+');currentSlide(1,'+id+')" alt="" border=3 height=100 width=100></img></td>'
+	tabela.appendChild(row);	
+	addModal(id,vimg)
+}
+
+id=1
+
+
+varr=[id,'POLTRONA','80 x 100 x 85','2','600','CONJUNTO LUIS XV PARA SALA'];vimg=['poltrona_sala_luiz_XV_1.JPG'];addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],vimg);id++;
+varr=[id,'MESA DE CENTRO','85 x 52 x 52','1','200','CONJUNTO LUIS XV PARA SALA'];vimg=['mesa_centro_espelhada.JPG'];addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],vimg);id++;
+varr=[id,'SOFÁ','222 x 107 x 90','1','900','CONJUNTO LUIS XV PARA SALA'];vimg=['poltrona_sala_luiz_XV_2.JPG'];addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],vimg);id++;
+varr=[id,'POLTRONA','86 x 88 x 85','6','450',''];vimg=['poltrona_sala_baixo.JPG'];addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],vimg);id++;
+varr=[id,'MESA DE CENTRO','72 x 48 x 50','1','100',''];vimg=[''];addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],vimg);id++;
+varr=[id,'CADEIRA','60 x 120 x 60','1','300',''];vimg=[''];addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],vimg);id++;
+varr=[id,'LUSTRE','','2','700','medir'];vimg=[''];addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],vimg);id++;
+varr=[id,'ARMÁRIO','165 x 168 x 40','1','300',''];vimg=['armario.JPG'];addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],vimg);id++;
+varr=[id,'BIBLIOTECA','365 x 215 x 42','1','1000',''];vimg=['biblioteca4.JPG'];addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],vimg);id++;
+varr=[id,'ESCRIVANINHA','144 x 78 x 80','1','1500',''];vimg=['escrivaninha2.JPG'];addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],vimg);id++;
+varr=[id,'CRISTALEIRA','140 x 176 x 48','1','1500','com/sem itens'];vimg=['cristaleira2.JPG'];addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],vimg);id++;
+varr=[id,'MESA','116 x 80 x 230','1','2500',''];vimg=['sala_jantar3.JPG'];addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],vimg);id++;
+varr=[id,'CADEIRA SEM APOIO','48 x 116 x 48','8','230',''];vimg=['sala_jantar4.JPG'];addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],vimg);id++;
+varr=[id,'CADEIRA','60 x 120 x 56','2','300',''];vimg=['sala_jantar4.JPG'];addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],vimg);id++;
+varr=[id,'BUFFET 1P','104 x 128 x 60','1','1000',''];vimg=['buffet5.JPG'];addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],vimg);id++;
+varr=[id,'BUFFET 2P','230 x 136 x 60','1','1500',''];vimg=['buffet5.JPG'];addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],vimg);id++;
+varr=[id,'ESPELHO DE CHÃO','62 x 184 x 50','1','800',''];vimg=['espelho_de_pe.JPG'];addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],vimg);id++;
+varr=[id,'CRIADO MUDO','50 x 55 x 42','4','170',''];vimg=['gaveteiro_criado_mudo2.JPG'];addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],vimg);id++;
+varr=[id,'PENTEADEIRA','130 x 170 x 50','2','800',''];vimg=['penteadeira.JPG'];addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],vimg);id++;
+varr=[id,'GAVETEIRO','120 x 100 x 60','2','600',''];vimg=['gaveteiro_criado_mudo2.JPG'];addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],vimg);id++;
+varr=[id,'CAMA SOLTEIRO','100 x 110 x 210','2','300','sem colchão'];vimg=[''];addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],vimg);id++;
+varr=[id,'CAMA CASAL','166 x 146 x 210','2','700','com colchão'];vimg=['cama_casal1.JPG'];addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],vimg);id++;
+varr=[id,'GUARDA ROUPA 2P','150 x 192 x 66','2','300','coroa, borboletas, puxador, quebradas, desmontar?'];vimg=['guarda_roupa.JPG'];addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],vimg);id++;
+varr=[id,'GUARDA ROUPA 3P','200 x 192 x 66','2','500','coroa, borboletas, puxador, quebradas, desmontar?'];vimg=['guarda_roupa.JPG'];addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],vimg);id++;
+
+
+
+
+var slideIndex = 1;
+	
+function openModal(id) {
+  slideIndex = 1;
+  document.getElementById('myModal'+id).style.display = "block";
+}
+
+function closeModal(id) {
+  slideIndex = 1;
+  document.getElementById('myModal'+id).style.display = "none";
 }
 
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+//showSlides(slideIndex);
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() { 
-  modal.style.display = "none";
+function plusSlides(n,id) {
+  showSlides(slideIndex += n,id);
+}
+
+function currentSlide(n,id) {
+  showSlides(slideIndex = n,id);
+}
+
+function showSlides(n,id) {
+  var i;
+  var slides = document.getElementsByName("mySlides"+id);
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
 }
 </script>
-
-<!--FIM IMAGEM-->
-
+    
 </body>
 </html>
