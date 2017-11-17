@@ -178,7 +178,7 @@ img.hover-shadow {
       <th>Ítem</th>
       <th>LAP(cm)</th>
       <th>Quantidade</th>
-      <th>Preço Unitário (R$)</th>
+      <th>Preço Unitário</th>
       <th>Obs</th>
       <th>Imagem</th>
     </tr>
@@ -187,7 +187,7 @@ img.hover-shadow {
 </div>
 
 <!-- FIM TABELA -->
-
+<h2 id='vtotal' style="text-align:center">MÓVEIS ANTIGOS</h2>
 
 <script>
 
@@ -209,43 +209,52 @@ function addModal(id,arr) {
 	document.body.appendChild(mod);
 	
 }
+valortotal=0;
 function addTabRow(id,item,lap,qut,pu,obs,vimg) {
 	var tabela = document.getElementById("tabela");
 	var row = document.createElement("tr");
-	row.innerHTML ='<td>'+item+'</td><td>'+lap+'</td><td>'+qut+'</td><td>'+pu+'</td><td>'+obs+'</td><td><img name="img" src="imgs/'+vimg[0]+'" onclick="openModal('+id+');currentSlide(1,'+id+')" alt="" border=3 height=100 width=100></img></td>'
+	
+	precou=(pu).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL',});
+	
+	row.innerHTML ='<td>'+item+'</td><td>'+lap+'</td><td>'+qut+'</td><td>'+precou+'</td><td>'+obs+'</td><td><img name="img" src="imgs/'+vimg[0]+'" onclick="openModal('+id+');currentSlide(1,'+id+')" alt="" border=3 height=100 width=100></img></td>'
 	tabela.appendChild(row);	
 	addModal(id,vimg)
+	valortotal=valortotal+qut*pu
 }
+
+
 
 id=1
 
+varr=[id,'POLTRONA','80 x 100 x 85',2,600.00,'CONJUNTO LUIS XV PARA SALA'];vimg=['poltrona_sala_luiz_XV_1.JPG'];addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],vimg);id++;
+varr=[id,'MESA DE CENTRO','85 x 52 x 52',1,200,'CONJUNTO LUIS XV PARA SALA'];vimg=['mesa_centro_espelhada.JPG'];addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],vimg);id++;
+varr=[id,'SOFÁ','222 x 107 x 90',1,900,'CONJUNTO LUIS XV PARA SALA'];vimg=['poltrona_sala_luiz_XV_2.JPG'];addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],vimg);id++;
+varr=[id,'POLTRONA','86 x 88 x 85',6,450,''];vimg=['poltrona_sala_baixo.JPG'];addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],vimg);id++;
+varr=[id,'MESA DE CENTRO','72 x 48 x 50',1,100,''];vimg=[''];addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],vimg);id++;
+varr=[id,'CADEIRA','60 x 120 x 60',1,300,''];vimg=[''];addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],vimg);id++;
+varr=[id,'LUSTRE','',2,700,'medir'];vimg=[''];addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],vimg);id++;
+varr=[id,'ARMÁRIO','165 x 168 x 40',1,300,''];vimg=['armario.JPG'];addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],vimg);id++;
+varr=[id,'BIBLIOTECA','365 x 215 x 42',1,1000,''];vimg=['biblioteca4.JPG'];addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],vimg);id++;
+varr=[id,'ESCRIVANINHA','144 x 78 x 80',1,1500,''];vimg=['escrivaninha2.JPG'];addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],vimg);id++;
+varr=[id,'CRISTALEIRA','140 x 176 x 48',1,1500,'com/sem itens'];vimg=['cristaleira2.JPG'];addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],vimg);id++;
+varr=[id,'MESA','116 x 80 x 230',1,2500,''];vimg=['sala_jantar3.JPG'];addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],vimg);id++;
+varr=[id,'CADEIRA SEM APOIO','48 x 116 x 48',8,230,''];vimg=['sala_jantar4.JPG'];addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],vimg);id++;
+varr=[id,'CADEIRA','60 x 120 x 56',2,300,''];vimg=['sala_jantar4.JPG'];addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],vimg);id++;
+varr=[id,'BUFFET 1P','104 x 128 x 60',1,1000,''];vimg=['buffet5.JPG'];addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],vimg);id++;
+varr=[id,'BUFFET 2P','230 x 136 x 60','1',1500,''];vimg=['buffet5.JPG'];addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],vimg);id++;
+varr=[id,'ESPELHO DE CHÃO','62 x 184 x 50',1,800,''];vimg=['espelho_de_pe.JPG'];addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],vimg);id++;
+varr=[id,'CRIADO MUDO','50 x 55 x 42',4,170,''];vimg=['gaveteiro_criado_mudo2.JPG'];addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],vimg);id++;
+varr=[id,'PENTEADEIRA','130 x 170 x 50',2,800,''];vimg=['penteadeira.JPG'];addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],vimg);id++;
+varr=[id,'GAVETEIRO','120 x 100 x 60',2,600,''];vimg=['gaveteiro_criado_mudo2.JPG'];addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],vimg);id++;
+varr=[id,'CAMA SOLTEIRO','100 x 110 x 210',2,300,'sem colchão'];vimg=[''];addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],vimg);id++;
+varr=[id,'CAMA CASAL','166 x 146 x 210',2,700,'com colchão'];vimg=['cama_casal1.JPG'];addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],vimg);id++;
+varr=[id,'GUARDA ROUPA 2P','150 x 192 x 66',2,300,'coroa, borboletas, puxador, quebradas, desmontar?'];vimg=['guarda_roupa.JPG'];addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],vimg);id++;
+varr=[id,'GUARDA ROUPA 3P','200 x 192 x 66',2,500,'coroa, borboletas, puxador, quebradas, desmontar?'];vimg=['guarda_roupa.JPG'];addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],vimg);id++;
 
-varr=[id,'POLTRONA','80 x 100 x 85','2','600','CONJUNTO LUIS XV PARA SALA'];vimg=['poltrona_sala_luiz_XV_1.JPG'];addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],vimg);id++;
-varr=[id,'MESA DE CENTRO','85 x 52 x 52','1','200','CONJUNTO LUIS XV PARA SALA'];vimg=['mesa_centro_espelhada.JPG'];addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],vimg);id++;
-varr=[id,'SOFÁ','222 x 107 x 90','1','900','CONJUNTO LUIS XV PARA SALA'];vimg=['poltrona_sala_luiz_XV_2.JPG'];addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],vimg);id++;
-varr=[id,'POLTRONA','86 x 88 x 85','6','450',''];vimg=['poltrona_sala_baixo.JPG'];addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],vimg);id++;
-varr=[id,'MESA DE CENTRO','72 x 48 x 50','1','100',''];vimg=[''];addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],vimg);id++;
-varr=[id,'CADEIRA','60 x 120 x 60','1','300',''];vimg=[''];addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],vimg);id++;
-varr=[id,'LUSTRE','','2','700','medir'];vimg=[''];addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],vimg);id++;
-varr=[id,'ARMÁRIO','165 x 168 x 40','1','300',''];vimg=['armario.JPG'];addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],vimg);id++;
-varr=[id,'BIBLIOTECA','365 x 215 x 42','1','1000',''];vimg=['biblioteca4.JPG'];addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],vimg);id++;
-varr=[id,'ESCRIVANINHA','144 x 78 x 80','1','1500',''];vimg=['escrivaninha2.JPG'];addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],vimg);id++;
-varr=[id,'CRISTALEIRA','140 x 176 x 48','1','1500','com/sem itens'];vimg=['cristaleira2.JPG'];addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],vimg);id++;
-varr=[id,'MESA','116 x 80 x 230','1','2500',''];vimg=['sala_jantar3.JPG'];addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],vimg);id++;
-varr=[id,'CADEIRA SEM APOIO','48 x 116 x 48','8','230',''];vimg=['sala_jantar4.JPG'];addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],vimg);id++;
-varr=[id,'CADEIRA','60 x 120 x 56','2','300',''];vimg=['sala_jantar4.JPG'];addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],vimg);id++;
-varr=[id,'BUFFET 1P','104 x 128 x 60','1','1000',''];vimg=['buffet5.JPG'];addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],vimg);id++;
-varr=[id,'BUFFET 2P','230 x 136 x 60','1','1500',''];vimg=['buffet5.JPG'];addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],vimg);id++;
-varr=[id,'ESPELHO DE CHÃO','62 x 184 x 50','1','800',''];vimg=['espelho_de_pe.JPG'];addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],vimg);id++;
-varr=[id,'CRIADO MUDO','50 x 55 x 42','4','170',''];vimg=['gaveteiro_criado_mudo2.JPG'];addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],vimg);id++;
-varr=[id,'PENTEADEIRA','130 x 170 x 50','2','800',''];vimg=['penteadeira.JPG'];addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],vimg);id++;
-varr=[id,'GAVETEIRO','120 x 100 x 60','2','600',''];vimg=['gaveteiro_criado_mudo2.JPG'];addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],vimg);id++;
-varr=[id,'CAMA SOLTEIRO','100 x 110 x 210','2','300','sem colchão'];vimg=[''];addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],vimg);id++;
-varr=[id,'CAMA CASAL','166 x 146 x 210','2','700','com colchão'];vimg=['cama_casal1.JPG'];addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],vimg);id++;
-varr=[id,'GUARDA ROUPA 2P','150 x 192 x 66','2','300','coroa, borboletas, puxador, quebradas, desmontar?'];vimg=['guarda_roupa.JPG'];addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],vimg);id++;
-varr=[id,'GUARDA ROUPA 3P','200 x 192 x 66','2','500','coroa, borboletas, puxador, quebradas, desmontar?'];vimg=['guarda_roupa.JPG'];addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],vimg);id++;
 
 
+//ADIÇÃO DO VALOR TOTAL
+document.getElementById("vtotal").textContent='VALOR TOTAL = ' +(valortotal).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL',});
 
 
 var slideIndex = 1;
