@@ -79,7 +79,7 @@ function addTabRow(id,item,lap,qut,pu,obs,nimgs) {
 
 
 //ADICIONA DADOS E TABELA
-document.body.innerHTML+= "\
+document.body.innerHTML= "\
 <h2>VENDA DE MÓVEIS E ARTIGOS ANTIGOS PARA RETIRADA</h2>\
 <p>CONTATO?</p>\
 <h2 style='text-align:center'>MÓVEIS ANTIGOS</h2>\
@@ -95,7 +95,7 @@ document.body.innerHTML+= "\
     </tr>\
   </table>\
 </div>\
-<h2 id='vtotal' style='text-align:center'>MÓVEIS ANTIGOS</h2>"
+<h2 id='vtotal' style='text-align:center'>MÓVEIS ANTIGOS</h2>" + document.body.innerHTML
 //
 
 
