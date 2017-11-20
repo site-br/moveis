@@ -1,0 +1,46 @@
+du -sh folder
+
+#renomeia as imagens
+alias xpto='ls | cat -n | while read n f; do mv "$f" "$n.jpg"; done'
+ls | cat -n | cut -f2 | while read d; do cd "$d";xpto ;cd ..; done
+
+
+#converte todos o jpg
+find . -name *.jpg | while read f; do convert "$f" -resize 300x300 "$f" ; done
+
+#Conta numero de imagens nos diretorios
+ls -l | grep '^d' | cut -d' ' -f9 | while read d; do echo "$d" `ls "$d" | grep jpg | wc -l`; done | sort -n
+
+
+
+
+gitacp "teste" https://site-br:cetsp2016@github.com/site-br/moveis.git
+
+//1-POLTRONA LUIZ XV
+//2-MESA DE CENTRO LUIZ XV
+//3-SOFA LUIZ XV
+//4-POLTRONA SALA
+//5-MESA CENTRO MADEIRA
+//6-CADEIRA AVULSA
+//7-LUSTRE
+//8-LUSTRE CRISTAL
+//9-ARMARIO ESCRITORIO
+//10-BIBLIOTECA
+//11-ESCRIVANINHA
+//12-CRISTALEIRA
+//13-MESA SALA DE JANTAR
+//14-CADEIRA MESA , SEM APOIO
+//15-CADEIRA MESA COM APOIO
+//16-BUFFET 1P
+//17-BUFFET 2P
+//18-ESPELHO DE CHÃO
+//19-CRIADO MUDO
+//20-PENTEADEIRA
+//21-GAVETEIRO QUARTO
+//22-CAMA SOLTEIRO
+//23-CAMA CASAL
+//24-GUARDA ROUPAS 2P
+//25-GUARDA ROUPAS 3P
+
+
+
