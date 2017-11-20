@@ -80,10 +80,10 @@ function addTabRow(id,item,lap,qut,pu,obs,nimgs) {
 
 //ADICIONA DADOS E TABELA
 document.body.innerHTML+= "\
+<div style='overflow-x:auto;'>\
 <h2>VENDA DE MÓVEIS E ARTIGOS ANTIGOS PARA RETIRADA</h2>\
 <p>CONTATO?</p>\
 <h2 style='text-align:center'>ITENS DISPONIVEIS</h2>\
-<div style='overflow-x:auto;'>\
   <table border='1' id='tabela'>\
     <tr>\
       <th>ÍTEM</th>\
