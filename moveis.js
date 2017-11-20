@@ -194,7 +194,7 @@ varr=[id,'CAMA CASAL','166 x 146 x 210',2,3000,'COM COLCHÃO',8];
 addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],varr[6]);id++;
 
 //24-GUARDA ROUPAS 2P
-varr=[id,'GUARDA ROUPA 2P','150 x 192 x 66',2,800,'UMA COROA DE UM DOS GUARDA-ROUPA ESTÁ QUEBRADA',1];
+varr=[id,'GUARDA ROUPA 2P','150 x 192 x 66',2,800,'UMA COROA DE UM DOS GUARDA-ROUPA ESTÁ QUEBRADA',2];
 addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],varr[6]);id++;
 
 //25-GUARDA ROUPAS 3P
