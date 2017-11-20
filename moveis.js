@@ -59,6 +59,8 @@ function addModal(id,nimgs) {
 	mod.innerHTML=html;
 	document.body.appendChild(mod);
 	
+	detectswipe(mod.id,plusSlides);
+	
 }
 valortotal=0;
 function addTabRow(id,item,lap,qut,pu,obs,nimgs) {
