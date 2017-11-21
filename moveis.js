@@ -9,6 +9,13 @@ function detectswipe(el,id) {
   var max_y = 60;  //max y difference for horizontal swipe
   var direc = 0;
   ele = document.getElementById(el);
+  
+  ele.addEventListener('backbutton', function(e){
+	  e.style.display = "none";
+  },false);
+  
+  
+  
   ele.addEventListener('touchstart',function(e){
     var t = e.touches[0];
     swipe_det.sX = t.screenX; 
