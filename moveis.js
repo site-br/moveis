@@ -102,51 +102,51 @@ document.body.innerHTML+= "\
 id=1
 
 //1-POLTRONA LUIZ XV
-varr=[id,'POLTRONA','80 x 100 x 85',2,600.00,'CONJUNTO LUIS XV PARA SALA',4];
+varr=[id,'POLTRONA','80 x 100 x 85',2,1400,'CONJUNTO LUIS XV PARA SALA',4];
 addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],varr[6]);id++;
 
 //2-MESA DE CENTRO LUIZ XV
-varr=[id,'MESA DE CENTRO','85 x 52 x 52',1,400,'CONJUNTO LUIS XV PARA SALA',3];
+varr=[id,'MESA DE CENTRO','85 x 52 x 52',1,800,'CONJUNTO LUIS XV PARA SALA',3];
 addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],varr[6]);id++;
 
 //3-SOFA LUIZ XV
-varr=[id,'SOFÁ','222 x 107 x 90',1,1200,'CONJUNTO LUIS XV PARA SALA',3];
+varr=[id,'SOFÁ','222 x 107 x 90',1,2000,'CONJUNTO LUIS XV PARA SALA',3];
 addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],varr[6]);id++;
 
 //4-POLTRONA SALA
-varr=[id,'POLTRONA','86 x 88 x 85',6,450,'',5];
+varr=[id,'POLTRONA','86 x 88 x 85',6,1000,'',5];
 addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],varr[6]);id++;
 
 //5-MESA CENTRO MADEIRA
-varr=[id,'MESA DE CENTRO','72 x 48 x 50',1,200,'',2];
+varr=[id,'MESA DE CENTRO','72 x 48 x 50',1,700,'',2];
 addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],varr[6]);id++;
 
 //6-CADEIRA AVULSA
-varr=[id,'CADEIRA','60 x 120 x 60',1,400,'',3];
+varr=[id,'CADEIRA','60 x 120 x 60',1,1200,'',3];
 addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],varr[6]);id++;
 
 //7-LUSTRE
-varr=[id,'LUSTRE','',0,700,'-',5];
+varr=[id,'LUSTRE','',3,0,'-',5];
 addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],varr[6]);id++;
 
 //8-LUSTRE CRISTAL
-varr=[id,'LUSTRE CRISTAL','18 x 20 x 18',6,300,'',2];
+varr=[id,'LUSTRE CRISTAL','18 x 20 x 18',6,0,'',2];
 addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],varr[6]);id++;
 
 //9-ARMARIO ESCRITORIO
-varr=[id,'ARMÁRIO','165 x 168 x 40',1,600,'',2];
+varr=[id,'ARMÁRIO','165 x 168 x 40',1,1000,'',2];
 addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],varr[6]);id++;
 
 //10-BIBLIOTECA
-varr=[id,'BIBLIOTECA','365 x 215 x 42',1,1000,'',4];
+varr=[id,'BIBLIOTECA','365 x 215 x 42',1,2000,'',4];
 addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],varr[6]);id++;
 
 //11-ESCRIVANINHA
-varr=[id,'ESCRIVANINHA','144 x 78 x 80',1,1500,'',3];
+varr=[id,'ESCRIVANINHA','144 x 78 x 80',1,1900,'',3];
 addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],varr[6]);id++;
 
 //12-CRISTALEIRA
-varr=[id,'CRISTALEIRA','140 x 176 x 48',1,2500,'ITENS NÃO INCLUIDOS',4];
+varr=[id,'CRISTALEIRA','140 x 176 x 48',1,3000,'ITENS NÃO INCLUIDOS',4];
 addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],varr[6]);id++;
 
 //13-MESA SALA DE JANTAR
@@ -154,19 +154,19 @@ varr=[id,'MESA','116 x 80 x 230',1,3500,'',4];
 addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],varr[6]);id++;
 
 //14-CADEIRA MESA , SEM APOIO
-varr=[id,'CADEIRA SEM APOIO','48 x 116 x 48',8,300,'',2];
+varr=[id,'CADEIRA SEM APOIO','48 x 116 x 48',8,1000,'',2];
 addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],varr[6]);id++;
 
 //15-CADEIRA MESA COM APOIO
-varr=[id,'CADEIRA','60 x 120 x 56',2,400,'',3];
+varr=[id,'CADEIRA','60 x 120 x 56',2,1200,'',3];
 addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],varr[6]);id++;
 
 //16-BUFFET 1P
-varr=[id,'BUFFET 1P','104 x 128 x 60',1,1000,'',4];
+varr=[id,'BUFFET 1P','104 x 128 x 60',1,2000,'',4];
 addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],varr[6]);id++;
 
 //17-BUFFET 2P
-varr=[id,'BUFFET 2P','230 x 136 x 60','1',2000,'',5];
+varr=[id,'BUFFET 2P','230 x 136 x 60','1',4000,'',5];
 addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],varr[6]);id++;
 
 //18-ESPELHO DE CHÃO
@@ -174,19 +174,19 @@ varr=[id,'ESPELHO DE CHÃO','62 x 184 x 50',1,800,'',2];
 addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],varr[6]);id++;
 
 //19-CRIADO MUDO
-varr=[id,'CRIADO MUDO','50 x 55 x 42',4,250,'',3];
+varr=[id,'CRIADO MUDO','50 x 55 x 42',4,750,'',3];
 addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],varr[6]);id++;
 
 //20-PENTEADEIRA
-varr=[id,'PENTEADEIRA','130 x 170 x 50',2,1200,'',4];
+varr=[id,'PENTEADEIRA','130 x 170 x 50',2,2500,'',4];
 addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],varr[6]);id++;
 
 //21-GAVETEIRO QUARTO
-varr=[id,'GAVETEIRO','120 x 100 x 60',2,1000,'',5];
+varr=[id,'GAVETEIRO','120 x 100 x 60',2,2500,'',5];
 addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],varr[6]);id++;
 
 //22-CAMA SOLTEIRO
-varr=[id,'CAMA SOLTEIRO','100 x 110 x 210',2,1000,'SEM COLCHÃO',3];
+varr=[id,'CAMA SOLTEIRO','100 x 110 x 210',2,1500,'SEM COLCHÃO',3];
 addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],varr[6]);id++;
 
 //23-CAMA CASAL
@@ -194,11 +194,11 @@ varr=[id,'CAMA CASAL','166 x 146 x 210',2,3000,'COM COLCHÃO',8];
 addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],varr[6]);id++;
 
 //24-GUARDA ROUPAS 2P
-varr=[id,'GUARDA ROUPA 2P','150 x 192 x 66',2,800,'UMA COROA DE UM DOS GUARDA-ROUPA ESTÁ QUEBRADA',2];
+varr=[id,'GUARDA ROUPA 2P','150 x 192 x 66',2,1800,'UMA COROA DE UM DOS GUARDA-ROUPA ESTÁ QUEBRADA',2];
 addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],varr[6]);id++;
 
 //25-GUARDA ROUPAS 3P
-varr=[id,'GUARDA ROUPA 3P','200 x 192 x 66',2,1200,'UMA COROA DE UM DOS GUARDA-ROUPA ESTÁ QUEBRADA',4];
+varr=[id,'GUARDA ROUPA 3P','200 x 192 x 66',2,2600,'UMA COROA DE UM DOS GUARDA-ROUPA ESTÁ QUEBRADA',4];
 addTabRow(varr[0],varr[1],varr[2],varr[3],varr[4],varr[5],varr[6]);id++;
 
 
