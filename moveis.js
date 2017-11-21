@@ -82,7 +82,7 @@ function addTabRow(id,item,lap,qut,pu,obs,nimgs) {
 document.body.innerHTML+= "\
 <div style='overflow-x:auto;'>\
 <h2>VENDA DE MÓVEIS E ARTIGOS ANTIGOS PARA RETIRADA</h2>\
-<p>CONTATO?</p>\
+<p>CONTATO : Fernando (11)99-265-9213</p>\
 <h2 style='text-align:center'>ITENS DISPONIVEIS</h2>\
   <table border='1' id='tabela'>\
     <tr>\
