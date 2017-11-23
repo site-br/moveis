@@ -117,7 +117,7 @@ document.body.innerHTML+= "\
       <th>LAP(cm)</th>\
       <th>QUANTIDADE</th>\
       <th>PREÇO UNITÁRIO</th>\
-      <!--<!--<th>OBS.</th>-->-->\
+      <!--<th>OBS.</th>-->\
       <th>IMAGENS</th>\
     </tr>\
   </table>\
