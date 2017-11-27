@@ -97,7 +97,7 @@ document.body.innerHTML+= "\
 <p>CONTATO : Fernando <a href='tel:+11992659213'>(11)992659213</a></p>\
 \
 <h2 style='text-align:center'>SALA LUIZ XV</h2>\
-  <table border='1' id='slxy'>\
+  <table width='100%' border='0' cellspacing='0' cellpadding='0' id='slxy'>\
     <tr>\
       <th>ÍTEM</th>\
       <th>LAP(cm)</th>\
