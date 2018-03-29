@@ -80,7 +80,13 @@ function addTabRow(id,idt,item,lap,qut,pu,obs,nimgs) {
 	
 	precou=(pu).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL',});
 	
-	row.innerHTML ='<td>'+item+'</td><td>'+lap+'</td><td>'+qut+'</td><td>'+precou+/*'</td><td>'+obs+*/'</td><td><img name="img" src="imgs/'+id+'/1.jpg" onclick="openModal('+id+');currentSlide(1,'+id+')" alt="" border=3 height=100 width=100></img></td>'
+	if (id==1 || id == 2 || id == 3 || id == 4 || id == 5 || id == 11){
+		cor = "#FF0000"
+		row.innerHTML ='<td bgcolor="'+cor+'" >(INDISPONÍVEL) '+item+'</td><td bgcolor="'+cor+'" >'+lap+'</td><td bgcolor="'+cor+'" >'+qut+'</td><td bgcolor="'+cor+'" >'+precou+/*'</td><td>'+obs+*/'</td><td bgcolor="'+cor+'" ><img name="img" src="imgs/'+id+'/1.jpg" onclick="openModal('+id+');currentSlide(1,'+id+')" alt="" border=3 height=100 width=100 ></img></td>'
+	}
+	else{	
+		row.innerHTML ='<td>'+item+'</td><td>'+lap+'</td><td>'+qut+'</td><td>'+precou+/*'</td><td>'+obs+*/'</td><td><img name="img" src="imgs/'+id+'/1.jpg" onclick="openModal('+id+');currentSlide(1,'+id+')" alt="" border=3 height=100 width=100></img></td>'
+	}
 	tabela.appendChild(row);	
 	addModal(id,nimgs)
 	//valortotal=valortotal+qut*pu
