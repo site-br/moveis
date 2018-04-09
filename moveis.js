@@ -80,7 +80,7 @@ function addTabRow(id,idt,item,lap,qut,pu,obs,nimgs) {
 	
 	precou=(pu).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL',});
 	
-	if (id==1 || id == 2 || id == 3 || id == 4 || id == 5 || id == 11){
+	if (id==1 || id == 2 || id == 3 || id == 4 || id == 5 || id == 11 || id == 18 || id == 22){
 		cor = "#FF0000"
 		row.innerHTML ='<td bgcolor="'+cor+'" >(INDISPONÍVEL) '+item+'</td><td bgcolor="'+cor+'" >'+lap+'</td><td bgcolor="'+cor+'" >'+qut+'</td><td bgcolor="'+cor+'" >'+precou+/*'</td><td>'+obs+*/'</td><td bgcolor="'+cor+'" ><img name="img" src="imgs/'+id+'/1.jpg" onclick="openModal('+id+');currentSlide(1,'+id+')" alt="" border=3 height=100 width=100 ></img></td>'
 	}
